@@ -122,4 +122,39 @@ footer a {
 	text-decoration: none;
 }
 
-@media(min-width:)
+@media(min-width:700px){
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+	}
+
+	.content-wrap, #section-b ul {
+		grid-column: 2/4;
+	}
+
+	.box, footer div {
+		grid-column: span 2;
+	}
+
+	#section-a .content-text{
+		columns: 2;
+		column-gap: 2em;
+	}
+	.content-text p {
+		padding-top: 0;
+	}
+
+	#section-b ul{
+		grid-column: 1/-1;
+	}
+
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	#section-b li {
+		width: 31%;
+	}
+}
+
